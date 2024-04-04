@@ -6,8 +6,8 @@ def number_guesser(min, max):
     feedback = ""
 
     while feedback != 'c':
-        guess = (min, max) // 2
-
+        guess = (min + max) / 2
+        
         feedback = input(f"Is {guess} too high (h), too low (l), or correct?").lower()
 
         if feedback == 'h':
