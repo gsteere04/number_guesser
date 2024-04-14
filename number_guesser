@@ -1,14 +1,10 @@
-import random
-
 def number_guesser(min, max):
-    low = min
-    high = max
     feedback = ""
 
     while feedback != 'c':
-        guess = (min + max) / 2
+        guess = (min + max) // 2
         
-        feedback = input(f"Is {guess} too high (h), too low (l), or correct?").lower()
+        feedback = input(f"Is {guess} too high (h), too low (l), or correct? ").lower()
 
         if feedback == 'h':
             max = guess - 1
